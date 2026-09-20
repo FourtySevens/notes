@@ -1,0 +1,285 @@
+
+## 2.0 Threats, Vulnerabilities, and Mitigation
+
+### 2.1 Compare and contrast common threat actors and motivations
+- **Threat Actors**
+	- Nation State
+		- `These are attackers that work for a world government, such as Lazarus Group with North Korea`
+	- Unskilled attacker
+	- Hacktivist
+		- `Someone who hacks for a socioeconomic cause. An activist`
+	- Insider Threat
+		- `An attacker who is on the inside of an organization`
+	- Organized Crime
+		- `Organized crime via the internet and tech has become massive in reset years. Think ransomeware attackers`
+	- Shadow IT
+		- `This is when someone without proper knowledge and approval uses or buys a new peice of software or hardware that the IT team is unaware of. This can cause hell on an IT team`
+- **Attributes of actors**
+	- Internal/External
+		- `Are then an internal or external threat? This refers to how much access they have to their target. Internal being well on the inside and external being on the ouside... duh`
+	- Resources/Funding
+		- `Teams or individuals with more fuding and rescources can achive more than those without. A Nation State group for example has alot more man power and information that a random person with nothing but a single laptop and hte internet`
+	- Level of sophistication/capability
+		- `This is obvious. An individual with more skill at hacking is going to be more dangerous as they likely know many different attacks. Knowing excactly what is happening whenever anything happens is very very valuable rather than just shooting in the dark
+- **Motivations**
+	- Data Exfiltration
+		- `Someone has data you or a client desires and you want to get ahold of it. Pretty simple motive`
+	- Espionage
+		- `Gathering information on a target is always valuable especially if it is from deep within`
+	- Service Disruption
+		- `Stopping services can disrupt alot of processes and can cause lots of monitary damage or dismay. It could also give an attacker a chance to break into the system if the stopped services is some sort of security measure`
+	- Blackmail
+		- `Blackmail is blackmail. its just an advantage to an attacker when they may wish to gain something from the target`
+	- Financial Gain
+		- `Hacking for money, many reasons why people do it. Its also very lucrative if done successfully`
+	- Philosophical/political beliefs
+		- `This alligns well with hacktavists. Someone on the internet badmouthed your religion so you wish to retaliate. Of course theres more serious reasons for this but whatever`
+	- Ethical
+		- `Again this alligns well with hacktavists. Everyone has issues with ethical practices so of course people are going to attack others over it`
+	- Revenge
+		- `Pretty basic but satisfying`
+	- Disruption/chaos
+		- `This is pretty similar to service disruption. Making chaos is great for hiding in plain sight. Or to just piss some people off`
+	- War
+		- `Unfortunatly this is all too common. Every country hackes eachother and theres cyber warfare all over the place`
+
+### 2.2 Explain common threat vectors and attack surfaces.
+- **Message Based**
+	- Email
+		- `Phishing emails are way too common today. Clicking links and downloading files from phishing emails causes a vast majority of cyber attacks.`
+	- Short Message Service(SMS)
+		- `Attackers like to send text messages out that seem very beliveable. Same with emails, this can lead to people falling for the trap and compomising security`
+	- Instant Messaging(IM)
+		- `Pretty much the same as sms`
+- **Image based**
+	- `Attackers can hide data within images as well as posing image files as other types of files.`
+- **File-Based**
+	- `Files contain data. Files contain malware. Files contain anything. Never open untrusted stuff`
+- **Voice Call**
+	- `This falls under social engineering. Using voice calls to get others to divulge sensitive information or also getting an un-suspecting person to change sensitive info`
+- **Removable Device**
+	- `NEVER plug in a random usb device. People often leave them out in public areas in hopes that someone takes it a plugs it into something. An attack can occur the moment that usb is plugged in.`
+- **Vulnerable Software**
+	- `Any software can have vulnerabilities. Always update your software, majority of updates are security patches`
+	- Client-Based
+		- `Client based software is software that you actually have to download in order to use the software. Something needs to be on the machine.`
+	- Agent-less
+		- `Nothing needs to be downloaded or installed on target machine for the software or monitoring to be used. It uses existing protocols. Like API's or SSH, there is nor program needed to be installed to conduct the specific activity`
+- **Un-secure Networks**
+	- `Unsecure networks are dangerous to operate sensitive services and or proccess over. Always ensure a strong network security posture`
+	- Wireless
+		- `It is easy to abuse wireless protocols. Always enusre your wireless access points are using the most recent a best security standards.`
+	- Wired
+		- `Wiretaps exist. Dont allow anyone to just plug into the network`
+	- Bluetooth
+		- `PAN. Pretty exploitable however not so much today. Its a small range so its impact isnt all to great i dont think.`
+- **Open Service Ports**
+	- `Open ports are the FIRST thing attackers look for when conducting recon. Make sure they are secure and only allowing the appropriate traffic. Also make sure the services are up to date, this is crucial`
+- **Default Credentials**
+	- `ALWAYS ALWAYS ALWAYS change passwords and usernames from the default. Your asking to get broken into. This is also one of the first things and attacker can look for`
+- **Supply Chain**
+	- `If an attacker knows that services you are using, they could attack a vulnerablilty within the service that can lead to your systems`
+	- Managed Service Providers (MSPs)
+		- `Again, an attacker can go thorugh a service that your systems use. For example if you use a cloud service for your database, that service could be exploited and from within the service they could move to the database or expose its info`
+	- Vendors
+		- `Pretty much the same as MSPs, Vendors just give out software and proccesses`
+	- Suppliers
+		- `Again, same concept as the previous two`
+- **Human Vectors and Social Engineering**
+	- `These are all methods of tricking people into doing something for the advantage of the attacker`
+	- Phishing
+		- `An email or message that contains malicious contents that the attacker wants you to download and run`. Often too good to be true
+	- Vishing
+		- `Same as phishing but for phone calls`
+	- Smishing
+		- `Same as phishing but with SMS`
+	- Misinformation/disinformation
+		- `Lying is very effective. Presentinig a target with beleivable false information can cause them to make baaaadd decisions.`
+	- Impersonation
+		- `Simply acting as another individual to gain information not meant for you`
+	- Business email compromise
+		- `Business emails can often contain sensitive info in regards to the business operations. Having access to said information and conversation is very very advantagious`
+	- Pretexting
+		- `When an malicious party creates a false but belivable story in order to gain information`
+	- Watering Hole
+		- `When an attacker observes frequently visited sites of a target and leaves malware on said site for the target to eventually become infected with`
+	- Brand Impersonation
+		- `Acting as a brand or company to deceive a target into divulging information`
+	- Typosquatting
+		- `When an attacker owns a domain that is similar to common domain names. The false site generally is malicious. This relies on people mistyping websites. eg google.com and gogle.com`
+
+### 2.3 Explain various types of vulnerabilities
+
+- **Application**
+	- Memory Injection
+		- `An attacker injects code into the computers memory to be proccessed bypassing normal security operations. Code that is to be put in memory goes through extensive checking but bypassing this allows anything to be run`
+	- Buffer overflow
+		- `When a memory block gets a value that is larger than the block can hold so the extra data can enter a different block essentially putting the extra data in some other operation. This usually causes crashes`
+	- Race Conditions
+		- `This is where two or more threads access shared data and try to change it at the same time. There must be synchronization.`
+		- Time of check (TOC) and Time of use (TOU)
+			- `TOC refers to when a check is made such as authentication and TOU is a point in which a proccess has began. When a race condition occurs, the TOU is usually in an incorrect order to where the TOC doesnt check the TOU or something begins before the TOC can occur`
+	- Malicious Updates
+		- `This is just when a software gets updated, the author could hide malicious code within it`
+- **OS Based**
+	- `There are many vulnerabilities within OS. Each OS works differently in some fashion. Think of windows and how it uses dll's. Them shits get hacked alot`
+- **Web Based**
+	- SQL Injection
+		- `Whenever a site needs to referance information such as usernames and passwords, the information is retrived from the database using SQL and so if someone can send direct SQL queries to the site, then they can access the database, BAD`
+	- Cross Site Scripting (XSS)
+		- `This is just where an attacker can inject malicious scripts into an otherwise unsuspecting site. That code can get exicuted by another user or can be used to execute attacks`
+- **Hardware**
+	- Firmware
+		- `Vulnerabilities within firmware are of the utmost volitility. These can lead to kernel level access to an attacker.`
+	- End-of-Life
+		- `This is where a software or firmware is no longer being updated and no more patches are being released. This leaves infinite possibility for vulnerabilities and explots. NEVER use systems at their eol`
+	- Legacy
+		- `Similar to EOL. These are old systems that are still used and are probobly susceptible to exploitation`
+- **Virtualization**
+	- Virtual Machine Escape
+		- `This is malware can detect if the machine it is running on is a VM. It can also excape the VM infecting your actual machine.`
+	- Resource reuse
+		- `This is where a VM uses recources that are meant to be isolated for other VM's`
+- **Cloud-Specific**
+	- `Just like any other type of software, the cloud can have its own vulnerabilities.`
+- **Supply Chain**
+	- Service Provider
+		- `A service provider may have some sort of vulnerability within their own systems that could be exploited to further exploit the instances of said services. Imagine your ISP gets hacked. The attacker can then move to your network`
+	- Hardware Provider
+		- `A malicious insider party could install a backdoor into proprietary firmware for a piece of hardware. Once the customer receives and uses the hardware, bam a backdoor`
+	- Software Provider
+		- `Imagine an attacker manages to add malicious scripts to the next version of apache and the update goes out and now the attacker can exploit them`
+- **Cryptographic**
+	- `Encryption and hashing are everything. If it can be easily broken, nothing is secure.`
+- **Misconfiguration**
+	- `Accidentally allowing specific options on devices or services can lead to those options being exploited. Think of IP cameras, they're often defaultly configured to face outward to the internet`
+- **Mobile Devices**
+	- Side Loading
+		- `This is when applications are downloaded from places other than the dedicated app store. This is bad because these apps are not regulated and could easily hold malware and not be checked.`
+	- Jailbreaking
+		- `This is where the user manages to break out of the phones environment and is able to edit root files essentially removing all restrictions, good and bad. This more uncommon now but its a great way to be hacked.`
+- **Zero-Day**
+	- `An exploit that has been found by someone but is not yet known to anyone else. These are kept secret and used only when necissary. They are generally very powerfull`
+
+### 2.3 Given a scenario, analyze indicators of malicious activity
+
+- **Malware attacks**
+	- Ransomware
+		- `This is when an entire system becomes encrypted by an attacker. Only allowing decryption when the target pays the ransom.`
+	- Trojan
+		- `A malicious program packaged as something legit. You download a cracked version of steam but instead you loose your whole system.`
+	- Worm
+		- `A type of malware that self-replicates and spreads accross networks to continue infecting. They can cause ALOT of damage as once they start they usually cannot be stopped`
+	- Spyware
+		- `Malware that tracks the targets usage of the computer such as keystrokes, links visited, programs ran etc'
+	- Bloatware
+		- `Not malicious by nature but annoying non-theless. This is software that usually comes with OS's that is generally not needed usually providing qualitiy of life or controls. Things like alienware softwares or all the dumbass games and softwares that come pre installed on windows`
+	- Virus
+		- `Malicious programs that need to be executed for their malicious purposes to begin and spread.`
+	- Keylogger
+		- `A program that records all keystrokes on a machine`
+	- Logic Bomb
+		- `A malicious program that waits for a specific logic or activity to occur to execute its payload`
+	- Rootkit
+		- `Malware that allows an attacker to gain unauthorized and persistent root level access to a machine`
+- **Physical Attacks**
+	- Brute Force
+		- `This is just where someone tries to use every combination in a code to crack a code or passkey`
+	- Radio Frequency Identification Cloning (RFID)
+		- `Many physical security systems use RFID tags to control access to places. It is easy to get your hands on a device that can clone the required frequency and use it as if it was the real one`
+	- Environmental
+		- `Idk when you use the physical environment to gain access to a area. Throwing a rock through a window`
+- **Network Attacks**
+	- Distributed Denial of Service (DDoS)
+		- `When a buch of bots are used to clog up network traffic and slow everything to a halt`
+	- Domain Name System Attacks (DNS)
+		- `This is where the DNS is altered in a way to which the targets are routed to the wrong addresses or a malicious one`
+	- Wireless
+		- `Idk if your using a wireless device and you keep getting disconnected your over and over you might be getting sent deauth packets and the network is being hacked`
+	- On-path
+		- `A man in the middle attack. This is where an attacker is being sent the sources information and then from the attacker the information is sent to the target. This allows the attacker to see all of the communication as well as manipulate it`
+	- Credential Replay
+		- `This is where an attacker can wait for a legit login or transaction to occur and then later replay said login or transaction to mimic the legit one.`
+	- Malicious Code
+		- `Well if there is malicious code being execuded on your system it may slow down and effect other proccesses`
+- **Application Attacks**
+	- Injection
+		- `When someone inserts code into an applications memory for remote code exicution within that program`
+	- Buffer Overflow
+	- Replay
+	- Privilege Escalation
+		- `This is where a malicious attacker has base access to a system and tries to gain root access`
+	- Forgery
+		- `Where an attacker is able to make fake digital signatures to gain false trust within an app or system`
+	- Directory Transversal
+		- `In some applications, there are ways to access and maneuver through the servers file system from within the application.`
+- **Cryptographic Attacks**
+	- Downgrade
+		- `This is an attack where a system is forced to downgrade its cryptographic standard to an older unsecure standard`
+	- Collision
+		- `This is where someone attempts to make the same hash value with two different inputs. THIS IS VERY BAD`
+- **Password Attacks**
+	- Spraying
+		- `This is where an attacker tries to use a single password to log into multple different accounts. This works because people use the same passwords. Dumb`
+	- Brute Force
+		- `Common asf, this is where an attacker tries every combination to break a password hash or just login depending on the service`
+- **Indicators**
+	- Account Lockout
+		- `Pretty obvious. If you didnt change the password and you cant loggin with the correct password, it was probobly comprimised and changed`
+	- Concurrent session usage
+		- `Many services dont allow one account to be logged in at two seperate instances`
+	- Blocked Content
+		- `If the content is blocked, its probobly because you have been logged out or blacklisted`
+	- Impossible travel
+		- `This is where an account has been logged in from several different geographical locations within a short period of time; it is impossible for me to log into discord from America and then from India in 2 minutes`
+	- Resource Consumption
+		- `Malware can tend to use alot of recources on your computer.`
+	- Resource Inaccessibility
+		- `Some malware can just bar you from using specific memory addresses or programs`
+	- Out of cycle logging
+		- `This is when activity is logged outside of regular operation hours`
+	- Published/documented
+		- `Yeah if you find your password or email on a list of comprimised services and credentials, you should probobly change it or just delete your account if possible`
+	- Missing Logs
+		- `Clearly missing logs are a good indicator that someone has deleted them`
+
+### 2.5 Explain the purpose of mitigation techniques used to secure the enterprise.
+
+- **Segmentation**
+	- `We segment networks into separate portions depending on the orginizational structure. Segmentation also makes it so if one segment has been comprimised the rest are isolated and untouchable from the comprimised segment`
+- **Access Control**
+	- Access control lists
+		- `Explicitly lists who is and is not allowed into the system. Not on the list? Too bad kid`
+	- Permissions
+		- `Users are often given different permissions to do certian things. Like an datacenter admin needs permission to access the server room or an employee needing to visit a specific site that may usually be un-allowed`
+- **Application Allow List**
+	- `A list of apps that are allowed to used on the network or company devices. These are apps that are cleared as secure. Apps installed on devices that arent on the list can provide vulnerabilities`
+- **Isolation**
+	- `Isolation machines and services makes it so should they be comprimised, the damage cannot spread`
+- **Patching**
+	- `Fixing vulnerabilities`
+- **Encryption**
+	- `Protect every piece of data that you possibly can. Encryption is everything`
+- **Monitoring**
+	- `Keeping eyes on the systems and netowrks is always good as this allows for immidiate incident response`
+- **Least Privilege**
+	- `Users systems and process should only have access to the minimum recources needed to operate correctly.`
+- **Configuration Enforcement**
+	- `Any configuration must follow set rules in order for change to occur. Like when a new user is added, the must add a new password when the log in for the first time.`
+- **Decommissioning**
+	- `When the company no longer uses technology they have to decommision it. This involves ensuring there is no information left on the devices and disposing of them in the proper manner`
+- **Hardening Techniques**
+	- Encryption
+		- `duh`
+	- Installation of Endpoint protection
+		- `Always secure endpoints. They ARE AN ATTACK VECTOR`
+	- Host-Based Firewall
+		- `Always have a damn firewall`
+	- Host Based IPS
+		- `Always have an IPS`
+	- Disabling ports/protocols
+		- `Always close unused ports and disable unused protocols from accessing the network`
+	- Default Password changes
+		- `NO DEFAULT PASSWORDS`
+	- Removal of unnecessary software
+		- `Any unnecessary software is useless and is an attack vector of some type`

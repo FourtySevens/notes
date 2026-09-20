@@ -1,0 +1,422 @@
+- **Security Baselines**
+	- Establish
+	- Deploy
+	- Maintain
+- **Hardening Targets**
+	- `Many of these devices can be hardened in many similar ways and fashions through different softwares and policies`
+	- Mobile Devices
+		- `With mobile devices its tricky. Its alot of dissallowing specific services that are usually available. THings such as app stores. `
+	- Workstations
+		- `With PC's, your pretty much have to sanatize the OS and always dissallow many different services`
+	- Switches 
+	- Routers
+	- Cloud Infrastructure
+		- `Cloud infrastructure is a little more different. Secuirty for the physical servers is up to the cloud provider. However we can do our best to secure the services we run on the servers with firewalls, and detection methods`
+	- Servers
+	- ICS/SCADA
+	- Embedded Systems
+		- `With embedded systems its almost expected for security to be built in with minor security patches`
+	- RTOS
+	- IoT Devices
+		- `This is more difficult. With IoT devices you harden it more from network security measures than device security.`
+- **Wireless Devices**
+	- Site Surveys
+	- Heat Maps
+		- `A heat map is importiant for secuirng mobile devices as it shows the bounds of the wireless network`
+- **Mobile Solutions**
+	- Mobile Devices Management
+		- `This is a tricky subject because wither way, people are going to be upset. Secuiring mobile devices is very hard because their very essence opposes security`
+	- Deployment Models
+		- BYOD
+			- `This is probobly the worst option for security but the best for employees ease of use. BYOD should only really be used in places where the device isnt going to be used for any critical operations as all of the security would have to be implimented on the network`
+		- Corporate Owned Personally Enabled
+			- `This is the best options for security sake. The work devices can be constantly monitored. The function of the device is under the companies complete control`
+		- Choose Your Own Device
+			- `This ones pretty similar to the previous option but the employee just chooses form a selection of corperation owned devices`
+	- Connection Methods
+		- Cellular
+			- `For hardening, this is probobly a bad but essential idea. The whole point of phones is that they work on cellular, but cellular is not the most secure option as internet control is held by the cell company`
+		- Wi-Fi
+			- `Best option. Have a secured wireless network.`
+		- Bluetooth
+			- `Bad bad idea. Bluetooth is super vulnerable. Just too risky and its also not very far ranged. Its a PAN`
+- **Wireless Security settings**
+	- Wi-Fi Protected Access (WPA3)
+		- `For the best wireless security, you will want to use WPA3. It is by far more secure than WPA2 and WEP`
+	- AAA/Remote Authentication Dial-in User Service
+	- Cryptographic Protocols
+	- Authentication Protocols
+- **Application Security**
+	- Input Validation
+	- Secure Cookies
+	- Static Code analysis
+	- Code signing
+- **Sandboxing**
+	- `This is where you always test changes inside of a clean unaltered machine environment to ensure that all of your changes and code work proprtly without putting your services or network in jepordy`
+- **Monitoring**
+	- `This one is pretty basic. SEIM is used everywhere it is always good to monitor your end devices`
+
+## 4.2 Explain the security implications of improper hardware, software and data asset management
+- **Acquisition/Procurement process**
+	- `Large corperations and enterprises dont just get their software and hardware from Best Buy. You always need to be carefull when getting equipment as it may not be as scrubbed clean as its meant to be. You could accidentally get software that has a backdoor or you could get a machine that isj ust waiting to be turned on to activate a virus. All sorts of things.`
+- **Assignment and Accounting**
+	- `Improper management of your hardware can be costly. Always ensure you know where and who has a peice of hardware. This also plays into a role of trust with the individuals who actually are assigned these items. If someone loses something you need to know immidiatly as it could be really bad depending.`
+	- Ownership
+		- `Defining who owns what is very importiant for liability reasons. It can also cause Administrative issues as generally if someone owns something you wish to deploy or use, you need permission`
+	- Classification
+		- `Classifying different items by layers of criticality/importiance or value are great ways to decide how you assign different stuff. Like an intern wont need an expensive computer with all of the crucial proccess available to them. `
+- **Monitoring/Asset Tracking**
+	- Inventory
+		- `Pretty basic for anywhere, keeping inventory is a great way to stay organized`
+	- Enumeration
+		- `Keeping a log for each and every single item will ensure you always have a rough idea of where your items are.`
+- **Disposal and Decommissioning**
+	- `So there are a few things that go into the disposal of retired or older peices of hardware that you no longer have a need for. Do you want to sell them to someone, do you want to just throw them away? Well the constant in both scenerios is that you need to ensure there is no data remaining on the devices.`
+	- Sanitation
+		- `This is where you completely remove everything off of the drive through various different means. Depending on the senisitivty of the data, this even includes shredding and burning disks.`
+	- Destruction
+		- `Its pretty common for enterpises to destroy decommisioned drives. This is the best for ensuring the data on the dirve is NEVER recovered.`
+	- Certification
+		- `Its also good practice and even required to provide certificates of destruction for drives to ensure that without a doubt no data will be recovered.`
+	- Data Retention
+		- `Drives can often still retain data written on the even after being shredded. There is a whole proccess to completely rendering data lost from a drive. This involves de-gaussing, shredding and burning`
+
+## 4.3 Explain various activities associated with vulnerability management
+- **Identification Methods**
+	- Vulnerability Scan
+		- `This is where someone uses a piece of software like OpenVAS to do through a network and throughly looking for vulnerabilities`
+	- Application Security
+		- Static Analysis
+			- `This is where the code of an application is is looked through in thourogh detail before its compiled. This is so that code errors are found before a dynamic test can begin`
+		- Dynamic Analysis
+			- `This is where the applications security is tested while it is actually running.`
+		- Package Monitoring
+			- `This is where you keep track of all of the third party libs and packages that your enterpirise uses, watcjing out for any vulnerabilities that they might have. Its needed because you almost will never have access to the source code or repo for the libs.`
+	- Threat Feed
+		- `A threat feed is a continous stream of information of different vulnerabilities and exploits that is available as soon as the vuln is reported`
+		- OSINT
+			- `OSINT is good for finding information about a threat or even better, a target. Its all publicly available information`
+		- Proprietary/third-party 
+			- `These are feeds that you pay another organization for access. You just need to be careful when using any 3rd party software and services`
+		- Information Sharing Organization
+			- `These are organixations whos sole purpose is to relay information as quick as possible so that it spreads everywhere.`
+		- Dark Web
+			- `The Dark Web is also a good place to get information because bad actors often times upload stolen data from their victims. Or they may also post vulnerabilities not found by the ethical side.`
+	- Pen Testing
+		- `This is where someone tries to hack your stuff.`
+	- Responsible Disclosure program
+		- `These are programs for secuirty researchers and ethical hackers to securely report vulnerabilities ethically so that they get fixed before someone malicious can use it.`
+		- Bug bounty programs
+			- `Companies often times offer money for people to find vulnerabilites for them`
+	- System/process audit
+		- `This is where you go through all of your systems and proccesses to see what is and isnt inherently secure`
+- **Analysis**
+	- Confirmation
+		- False Positive
+		- False Negative
+	- Prioritize
+		- `Some of the network infrastructure that your organization uses will be more importiant than alot of other pieces. So its importiant that you prioritize those critical items to ensure they are always secure.`
+	- Common Vulnerability Scoring System (CVSS)
+		- `This is a scorring system for Vulnerabilities based on many factors but it is used to grade the criticality of a vulnerability. The higher the level the more likely it can be exploited. You almost never want to have any vulnerabilities above a 4.`
+	- Common Vulnerability Enumeration (CVE)
+		- `A CVE is an entry that describes a vulnerability. All known vulnerabilities are given a CVE when they are found.`
+	- Vulnerability Classification
+		- `There are different classifications for vulnerabilites. They range from low to critical. A critical vulnerability is almost guarenteed to get exploited if someone wished to do so`
+	- Exposure Factor
+		- `An exposure factor is a percentage of the value of an asset should that asset be exposed`
+	- Environment Variables
+		- `These are different things that occur in or around the comoputing environments that can play a role in a proccess wether its meant to be or not`
+	- Industry/organization Impact
+		- `When you assess a company for vulnerablilities or anyhting else, you want to provide a fix or suggestion that doesnt alter the organizations proccesses whilst also providing adequite fixes`
+	- Risk Tolerance
+		- `This is the amount of risk a company is willing to take before they impliment mitigation techniques`
+- **Vulnerability Response and remediation**
+	- Patching
+		- `If you are able to, always try and patch an issue if it is within scope`
+	- Insurance
+		- `Alot of hardware and even software costs can be covered by insurance claims should something catastrophic happen. However this is not the case if the catastrophy could have been prevented by the cyber team.`
+	- Segmentation
+		- `If your enterprises stuff wasnt segmented, segment it. This significantly reduces global risk as it makes the risk only specific to wherever the source may be`
+	- Compensating Controls
+		- `Compensating controls are like safety nets. They are secondary security controls that can be used when the primary ones are not effective for the situation`
+	- Expectations and exemptions
+		- `When you remediate your security practices, there is a new level of security expectations or standards that your network is supposed to meet.`
+- **Validation of remediation**
+	- Re-scan
+		- `You would conduct a re-scan of the network and compare prior results to confirm that security changes are truly in effect`
+	- Audit
+		- `Performing another audit is also valuable, again, to compare results with prior results`
+	- Verification
+		- `You want to verify that the changes have been made, so this would require alot of testing an whatnot to ensure the issue is fixed`
+- **Reporting**
+	- `Yeah reporting all changes and vulnerability findings is very importiant.`
+
+## 4.4 Explain security monitoring and alerting concepts and tools
+- **Monitoring Computer Resources**
+	- Systems
+		- `Monitoring a systems reseources can be useful as alot of malware and or threats often times cause a systems resource usage go up. Odd resource usage at odd times can be indicitive of malicious activities ocurring on the device`
+	- Applications
+		- `If an application on one of your devices is consistanly hogging resources or using them at odd times, then there might be malicious activity occuring within the specific app.`
+	- Infrastructure
+		- `Monitoring the resources of infrastructural devices like routers, switches, IDS' etc, can provide alerts when there is suspicious activity occuring on at those spots.`
+- **Activities**
+	- Log Aggregation
+		- `Log aggregation is where you have onebig log that consists of other logs from other locations all across the network. `
+	- Alerting
+		- `Pretty simple, you get alerts when malicious or anomoulus activity is detected. Its a notifacation`
+	- Scanning
+		- `Scanning is where you consistantly check your network and devices for anything bad.`
+	- Reporting
+		- `Reporting as in reporting findnigs. Always ensure that anomolous behavior is being reported to the correct spot`
+	- Archiving
+		- `Keeping records of events and transactions. Being able to assign a time and place for everything is helplful`
+	- Alert Response and remediation/validation
+		- `Alert response is the actions taken after an alert has been triggered. Remediation is where you go through the steps to prevent the alert from occurring again. Validation means that the remidiation actually worked.`
+	- Quarantine
+		- `This is where an application or file may be malicious and is moved to a secure location, preventing the file from actually doing anything.`
+	- Alert tuning
+		- `This is where you optimize your alert to focus on more critical alerts and reduce false positives`
+- **Tools**
+	- Security Content Information Protocol (SCAP)
+		- `SCAP is a standarized security protocol that uses standards like CVE's to asess the security posture of a network, system and it can even be used on individual files. Its an automated security system with ALOT of different functionality`
+	- Benchmarks
+		- `Benchmarking is where you compare your networks security baseline against the industry standards. This is to show what areas may be lacking in security`
+	- Agent/Agentless
+		- `This is refering to where the security tool is logically located. Agent tools are those that are installed on a device directly. It can scan everything that occurs on the device and can even act as a firewall. Agentless is where the tool is located elsewhere. Things like sniffers or router ACL's. All of the actions performed on a system by an agentless tool are occuring via network communications`
+	- Security Event Information Management (SEIM)
+		- `This tool is like a security dashboard. It has all of your networks security information in one place and is logically organized. All in one monitoring`
+	- Anti-virus
+		- `The classic. Software that sits on your computer and scans and checks for viruses or malicious files and proccesses.`
+	- Data loss prevention (DLP)
+		- `DLP systems are those specifically designed to prevent the loss of data by many different means. It identifys sensitive data, it can enforce security policies and detect and prevents breaches`
+	- Simple Network Management Protocol traps 
+		- `This is where a machine on the network will send an SNMP message to the SNMP manager whenever something anomoulus occurs. Things like system shutdowns, odd CPU usage or Auth failures`
+	- NetFlow
+		- `NetFlow is a CISCO proprietary protocol for monitoring your network. It collects data on network devices and identifies things such as the top talkers and more`
+	- Vulnerability Scanners
+		- `These are tools that scan an entire network or device and determine any current vulnerabilities based on standards like CVE's`
+
+## 4.5 Given a scenario, modify enterprise capabilities to enhance security.
+- **Firewall**
+	- Rules
+		- `You can change firewall rules to dissallow types of traffic if needed`
+	- Access Lists
+		- `You can dissallow a specific malicious IP address from entering the network if you know they are malicious`
+	- Ports/Protocols
+		- `If someone is attacking a port open on a device, you can make the firewall block traffic to that port.`
+	- Screened subnets
+		- `This is where if you have a DMZ you can change the two different firewalls to have different configurations. `
+- **IDS/IPS**
+	- Trend
+	- Signatures
+- **Web filter**
+	- Agent-based
+		- `To change an agent based web filter you would need to cofigure the machine itself but this would allow for the most specific filtering per machine`
+	- Centralized Proxy
+		- `This is just a proxy that all of the traffic passes through before it can reach the network`
+	- URL Scanning
+		- `You can change your URL scanners to look for a specfic signature or oddity`
+	- Content Categorization
+		- `You can categorize different types of content by the network traffic and completely filter out all instances of the content category`
+	- Block Rules
+		- `You can block specific websites. Change whenever`
+	- Reputation
+		- `You can assign your networks users' reputations based on their internet usage. Like if they love to go to NSFW sites often, you probobly would consider them first when something may occur.`
+- **OS Security**
+	- Group Policy
+		- `You can change policies within a security group whenever you need to.`
+	- SELinux
+		- `This is the same thing as Group Policy but for Linux`
+- **Implementation of secure protocols**
+	- Protocol Selection
+		- `When selecting protolcols you'd probobly want to select whichever fits your use case with the best security features as possible. Like the bestest and newest encryption algorithms`
+	- Port Selection
+		- `You can move around services by each port if you wanted to, as to make it harder for an attacker to find the rescources.`
+	- Transport Method
+- **DNS Filtering**
+	- `This is where you can block traffic based on DNS requests. Probobly the best way to filter web traffic`
+- **Email Security**
+	- Domain based Message Authorization Reporting and Confirmance
+		- `This is a policy driven system that registers email domains and checks the domain everytime theres an inbound email. The system will then decide what happens to the email, if it is sent to the recipient or deleted`
+	- DomainKeys Identified Mail
+		- `This uses public key infrastructure to ensure the validity of an email. The public key is kept inside of TXT DNS records.`
+	- Sender Policy Framework
+		- `This is like a list of emails from a domain that are actually valid and are used to ensure an email sender is legit. It matches IP's to the DNS TXT that contains the list of authorized users.`
+	- Gateway
+		- `An email gateway is just an IP address that the emails are sent to and then sent over to the correct doamin.`
+- **File integrity monitoring**
+	- `Always compare hashes when downloading sensitive data to ensure integrity`
+- **DLP**
+- **Network Access Control**
+	- `NAC is an ACL for a whole network or segment that also enforces policy as well as providing permissions for guests and users`
+- **Endpoint detection and response/extended detection and response**
+	- `EDR is a system or software that monitors and detects threats with an automated response, like quarentining. XDR is just EDR but compiled for the entire network.`
+- **User behavior analytics**
+	- `If you have behavior analytics you can make a baseline for anomoly detection. You can compare normal traffic patterns so when there is abnormal patterns you will know immidiately. - Hopefully`
+
+## 4.6 Given a scenario, implement and maintain identity and access management.
+- **Provisioning/de-provisioning user accounts**
+	- `For each user you would always want them to have a unique ID that is only ever used once even once the user leaves the organization.`
+- **Permission assignments and implications**
+	- `Everyone in the organization has to have some sort of permissions for their role in the company. However you should only ever allow permissions for things an individual will need for the job, nothing more.`
+- **Identity Proofing**
+	- `This is where you compare previously collected data about a person or user with provided data from an individual trying to access info. `
+- **Federation**
+	- `This is where one platform or organization can transfer trust and allow a user to access another organizations information without needing to log on.`
+- **Single Sign On**
+	- Lightweight Directory Access Protocol (LDAP)
+		- `LDAP is the protocol that is used to manage network information like users and devices. LDAP can be used to provide SSO on the network.`
+	- Open Authorization (OAuth)
+		- `This is where you use another service to log in to another. So when you login to a site using a google login, the site will make a request to google and they will exhcnange  tokens that confirm the identity of the user`
+	- Security Assertions Markup Language
+- **Interoperability**
+	- `Interoperability is where different systems can work together. Gmail works with outlook. Windows can communicate with linux. A product or system can work with another similar product or system. In the context of identity management, you need to be able to reliably maintian access or at least ID control between each system`
+- **Attestation**
+	- `There needs to be someone or something that can attest to a users real identity`
+- **Access Controls**
+	- `Always be able to change access controls in case of a threat`
+	- Mandatory
+		- `This is access that a user is required to have in order to access anything. It is mandatory that you fit a specific condition.`
+	- Discretionary
+		- `This is access that is given by the discresion of a surperior usually based on the need of access for a user to execute their task`
+	- Role-Based
+		- `You can divide permission and access control by roles. Each role has pre-defined permissions and assign a role to a user.`
+	- Attribute-Based
+		- `Attribute is kind of like Role based but it is more dynamic. Permissions or access are determined by specific attributes of a user. Things like job title, IP addr, time of day, etc.`
+	- Time of day restrictions
+		- `Some things should and or should not be accessable during specific times of the day. This can be for a few reasons, if you have a system that just shouldnt have anyone on it at night, or maybe even at scheduled times for maintinance`
+	- Least privilege
+		- `Users should only have access to information and or proccesses that are absolutly required for their job. Nothing more.`
+- **Multifactor authentication**
+	- `MFA is where you must provide more than one form of identifacation to authorize`
+	- Implementations
+		- Bio-metrics
+			- `Things like adding eye scanners, fingerprinting`
+		- Hard/Soft Tokens
+			- `Think hardware vs software. A hard key is a literal key. A soft key would be a hash file or something digital`
+		- Security Keys
+	- Factors
+		- Something you know
+		- Something you have
+		- Something you are
+		- Somewhere you are
+- **Password concepts**
+	- Password best practices
+		- Length
+		- Complexity
+		- Reuse
+		- Expiration
+		- Age
+	- Password Managers
+	- Password-less
+- **Privileged access management tools**
+	- Just in time permissions
+	- Password vaulting
+		- `This is where any password that has ever been used may not be used ever again.`
+	- Ephemeral Credentials
+		- `These are timebound credentials like tokens or keys that are given and last only for a specific amount of time.`
+
+## 4.7 Explain the importance of automation and orchestration related to secure operations.
+- **Use cases of automation and scripting**
+	- User provisioning
+		- `A script to allow for easy user provisioning is super helpful as it can save alot of time`
+	- Resource provisioning
+		- `Again this is just a massive time saver that, if implimented securely, can be super helpful`
+	- Guard rails
+		- `Automated guard rails are great for ensuring that security policy is enforced all of the time`
+	- Security groups
+		- `Again just another time and effort saver`
+	- Ticket creation
+		- `Auto ticket creation is great for end users' availability for tech help`
+	- Escalation
+	- Enabling/disabling services and access
+		- `Often times new equipment or software may need alot of config or software changes and that can take a long time. Automating this is so very efficient`
+	- Continuous integration and testing
+		- `Auto testing is awesome. Time saver`
+	- Integrations and Application programming interfaces (APIs)
+		- `API's are used very commonly for task automation`
+- **Benefits**
+	- Efficiency/time saving
+		- `Easily the most common benefit. Automation saves SO MUCh time`
+	- Enforcing baselines
+		- `Automation allows for nearly guarenteed policy compliance with redundant baseline checks`
+	- Standard infrastructure configurations
+		- `If you have a script to set up a standard config, that almost always ensures that all of the hardware is the same and is properly configured as such`
+	- Scaling in a secure manner
+		- `Automation of scaling makes scaling incredibly easy`
+	- Employee retention
+		- `Not having to do painful or arduous tasks all of the time is a great way for employees to focus on the things that are importiant as well as more motivating`
+	- Reaction time
+		- `If you have constant automatic alerts then duh you gonna have a fast reaction time to a threat`
+	- Workforce multiplier
+		- `You can hire more employees for more difficult tasks instead of for crapy trivial roles`
+- **Other considerations**
+	- Complexity
+		- `Some proccesses can be  a bit too complex to automate`
+	- Cost
+		- `Some automation could require new hardware or software liscensing. No good`
+	- Single Point of Failure
+		- `You dont want your companies workflow's safty to completly rely on ONE system. Always be redundant`
+	- Tech Debt
+		- `tech debt can build up due to automation not being as detailed as if a human did the task`
+	- Ongoing support-ability
+		- `Things change and so you want your automated systems to adapt.`
+
+## 4.8 Explain appropriate incident response activities.
+- **Process**
+	- Preparation
+		- `This is the strengthening of the response process. This phase involves develping your policies, making an Incident response team, deploying monitoring tools, training, and maintaining up to date inventories`
+	- Detection
+		- `This is the phase where you find and or determine if an incident has occured. This involves monitoring, investigation of alerts and logs, and confirming the nature and scope of the event. 
+	- Analysis
+		- `This is the phase where you investigate the root cause of the confirmed event`
+	- Containment
+		- `This phase is to limit the spread of the impact. This is where you would isolate a machine or system as to dissallow the spread of further possible damage. Or you could apply a minor patch and work on a bigger fix`
+	- Eradication
+		- `This is the phase where you remove the root cause and all the malicious fragments and data it may have spawn. This is the fixing phase. Completely remove any and all.`
+	- Recovery
+		- `This is the return to regular operations. You will have to validate all changes and continue monitoring to ensure the threat is gone.`
+	- Lessons Learned
+		- `This is where you analyze the incident and improve your security posture based on the results. Make updates to policy etc.`
+- **Training**
+	- `Training for everyone is crucial. This is where you ensure your employees know how to spot phishing attemps or atleast tell when something is off.`
+- **Testing**
+	- Tabletop Exercise
+		- `This is a discussion based cybersecurity incident drill. It is designed to test a companies response plans. It is usually a hypothetical disscussion when the teams will respond to the hypothetical.`
+	- Simulation
+		- `This is a complete simulation of events. This could be a complete replica of your network over VMS or whatever you want. It is to be as accurate as possible`
+- **Root cause analysis**
+	- `This is apart of the analysis phase of the incident response process. This is where you find the actual cause of the incident.`
+- **Threat Hunting**
+	- `This is where you look for threats that are assumed to have made it past existing security defences. You do it in order to find a serious threat before it can act. These sorts of threats are usually going to be sophistcated and advanced.`
+- **Digital Forensics**
+	- Legal Hold
+		- `This is a formal legal process that instructs individuals not to alter or delete any data that may be relevant`
+	- Chain of custody
+		- `This is the documentation of who collected evidence, when where and how it was handled. Each transfer or access must be logged`
+	- Acquisition
+		- `This is where you create a forensic copy of digital media. You can use the copy to look for evidence while the origional is isolated.`
+	- Reporting
+		- `This is just where you give a detailed report of what was found, how it was found and analyzed, a timeline and a conclusion`
+	- Preservation
+		- `This is just ensuring that the origional data is unchanged.`
+	- E-Discovery
+		 - `This is a process where you collect, review and produce electronic information in legal cases.`
+
+## 4.9 Given a scenario, use data sources to support an investigation.
+- **Log Data**
+	- `For most of these points, its pretty straight forward. You would go through each looking for suspicious indicators.`
+	- Firewall Logs
+	- Application logs
+	- Endpoint logs
+	- OS-specific sec logs
+	- IPS/IDS logs
+	- Network logs
+	- Metadata logs
+- **Data Sources**
+	- Vulnerability scans
+		- `You would usually have these durring a pentest. Anything that is on this should be inspected`
+	- Automated reports
+		- `You would probobly go back to logged reports`
+	- Dashboards
+	- Packet Captures

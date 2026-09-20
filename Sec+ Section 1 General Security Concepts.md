@@ -1,0 +1,195 @@
+
+##### I'm basically just going through the exam objections and reviewing each point and taking crude notes explaining what each point is to help me learn and remember most of this stuff 
+`like scratch notes in a textbook!`
+
+## 1.0 General Security Concepts 12%
+
+### 1.1 Compare and Contrast types of security controls.
+- **Categories**
+	- Technical
+	- Managerial
+	- Operational
+	- Physical
+- **Control Types**
+	- Preventative
+	- Deterrent
+	- Detective
+	- Corrective
+	- Compensating
+	- Directive
+
+### 1.2 Summarize fundamental security concepts.
+- **The CIA of Security, Confidentiality, Integrity and Availability**
+	- `All this means is that information needs to be Confidential to everyone except those who are meant to use it; the information needs to be secure as in there are checks in place to ensure data hasnt been malformed; and making sure the data is available when it is needed with no hicups`
+- **Non-repudiation**
+	- `This ensures authenticity of a sender and recipient, it is proof that the communication or data are exactly as it is meant to be. Its to ensure everything has not been altered by a malicious user.`
+- **AAA, Authentication, Authorization and Accounting**
+	- `Makeing sure people or systems are who they say they are, what they have access to and when they did such things`
+	- Authenticating people
+		- `Esuring people who are meant to have access to apropriate data or places have said access`
+	- Authenticating systems
+		- `Makeing sure systems in use are again only accessing recources and data neccessary`
+	- Authorization Models
+		- `Defines how access to data and recources is granted or denied based on foactors like ID, role etc`
+- **Gap Analysis**
+	- `A comparison of a companies currenty security posture to the desired postion.`
+- **Zero Trust**
+	- `No one is trusted by default from inside or outside of the network. Verification is required for anyone  attempting to gain access to info`
+	- Control Plane
+		- `The portion of the network that manages and configures the network. handles authentication, auth and policy enforcement`
+		- Adaptive Identity
+			- `Dynamically adjusts access controls based on varions contextual factors such as Context-Aware Access(user location, device type, network connection and activity) Just In Time Access(Access is based on a temportary basis) and Risk Based Authentication(System can escilate auth requirements based on preceived risk level)`
+		- Threat scope reduction
+			- `To eliminate as many possible attack vectors as possible`
+		- Policy driven access control
+			- `users may access info Based on security policy`
+		- Policy Administrator
+			- `The individual responsible for ensure the security policy is in effect and functioning porperly`
+		- Policy Engine
+			- `The driver of the actual decision making of the access control variables`
+	- Data Plane
+		- Implicit trust zones
+			- `Areas in the network where trust is given because a lack of need. eg a home page of a website, you shouldnt need to auth to view a landing page`
+		- Subject/System
+		- Policy Enforcement Point
+			- `Point in the network where auth is required to continue further. eg logging in to a site to use its main fucntion or to log into a game server as a registered user`
+- **Physical Security**
+	- Bollards `those weird poles that come out of the groud to block cars`
+	- Access control vestibule ~ its a man trap
+	- Fences
+	- Video Surveillance
+	- Guard
+	- Access badges
+	- Lighting
+	- Sensors
+		- Infrared
+		- Pressure
+		- Microwave
+		- Ultrasonic
+- **Deception and disruption technology**
+- `These are all just bait for attackers, usually segmented and collects data on threats. Things that appear as legit but arent`
+	- Honeypot
+	- Honeynet
+	- Honeyfile
+	- Honeytoken
+
+### 1.3 Explain the importance of change management processes and the impact to security (boringgggg)
+
+- **Business processes impacting security operation**
+	- Approval process
+		- `You need to get aproval from the necessary overhead to conduct and changes and that can be long process`
+	- Ownership
+		- `Who owns what in regards to data and systems infrastructure.
+		- All of your data should have an owner`
+	- Stakeholders
+		- `Yes the people who invest in the company have a say in security changes depending on the request, eg spending money on expensive hardware can cut earnings i guess`
+	- Impact analysis
+		- `Analyzing the imapct a change may have`
+	- Test results
+		- `Analyzing test results, ALWAYS TEST MAJOR CHANGES and minor ones depending`
+	- Back-out plan
+		- `This is a set proceudre for when you must revert and change or well backout of a deal.You gotta have a way to recover or return to a previous state should a change be made`
+	- Maintenance window
+		- `A set timeframe in which the network may be unavailable to due updates or changes within its infrastructure`
+	- Standard operating procedure
+		- `The standard to which normal operations procede with. A standard to which changes are made to ensure normal operation`
+- **Technical implications**
+	- Allow/deny lists
+		- `Who is and isnt explicitly allowed`
+	- Restricted activities
+		- `Activities only able to conducted by select individuals. eg only and admin being able to change a password`
+	- Downtime
+		- `Time in which a network is down for maintinance and changes. Usually only wanna schedule at night or a weekend when theres no operations to mess up`
+	- Service restart
+		- `Sometimes you gonna update a service or change a config and a restart is required. Operaions may be down for a bit due to it`
+	- Legacy applications
+		- `Old applications that are still in use but are not major parts of the operations as they're outdated and unstable`
+	- Dependencies
+		- `Most softwares are dependant on other softwares to work so you must have the required dependancies.`
+- **Documentation**
+	- Updating diagrams
+	- Updating policies/procedures
+- **Version control**
+- `Ensuring services and systems are suing the correct version and updating regularly`
+
+### 1.4 Explain the importance of using appropriate cryptographic solutions.
+
+- **Public Key Infrastructure (PKI)**
+	- Public Key
+		- `A key that is available to anyone and is associated with a system or proccess. eg SSH public keys`
+	- Private Key
+		- `A key that is cryptographically related to a public key and is used in conjunction with the public key for authentication`
+	- Key Escrow
+		- `A method of securly storing and manageing keys to ensure data can be recovered in case of loss`
+- **Encryption**
+	- Levels
+	- `Each level can be encrypted within the previous level`
+		- Full-disk
+			- `the entire storage device is encrypted`
+		- Partition
+			- `Only a portion of a storage device is encrypted`
+		- File
+			- `A single file is encrypted.`
+		- Volume
+			- `A volume or a formatted partition is encrypted`
+		- Database
+			- `I'd hope u know a database is meant to be encrypted`
+		- Record
+			- `Securing logs of importiant changes`
+	- Transport/Communication
+		- `Almost all modern data transport is encrypted or atleast through a secure tunnel. TLS`
+	- Asymmetric
+		- `The same key is used for encryption and decryption, an exchange of the same key. Not as safe as symmetric`
+	- Symmetric
+		- `Public and private keys. Everyone has the public key but only those with a private key made from the public key can decrypt. This is better because no one is sharing the same key around`
+	- Key Exchange
+		- `A process where cryptographic keys are exchanged between 2 parties, allowing them to use the keys for sharing encrypted information`
+	- Algorithms
+		- `Theres many different encryption algorithms available such as: Tripple Data Encryption Standard(3DES), Blowfish, RSA, Advanced Encryption Standard 256(AES-256)`
+	- Key Length
+- **Tools**
+	- Trusted Platform Module (TPM)
+		- `A secure cryptoprocessor that is used to store device encryption keys. Its basically in charge of all of your devices encryption processes`
+	- Hardware Security Module (HSM)
+		- `Hardened and tamper resistant hardware devices that secure cryptographic proccess by creating, protecting and managing keys used for encrypt and decrypt of data and creating digital signatures and certs`
+	- Key Management System
+		- `A system that creates, stores, distributes, destroys, controls access and disables cryptographic keys`
+	- Secure enclave
+		- `A dedicated, isolated and secure area on a devices hardware that protects sensitive data and proccesses like cyrptographic keys and biometric data. Like when you use face ID it has to access the data from the secure enclave`
+- **Obfuscation**
+	- *noun*~ the action of making something obscure, unclear or unintelligible
+	- Steganography
+		- `Hiding data inside of images`
+	- Tokenization
+		- `The replacement of sensitive data with non-sensitive surrogate data called a token that can cryptographically map back to the origioal data. eg when you use your card to pay for something, your actual bank details arent being transfered around, its using tokens instead.`
+	- Data Masking
+		- `The proccess of hiding data by modifying in a way that is is of no value to a malicious user`
+- **Hashing**
+	- `Turns data into a sixed length string by doing alot of math and conversions. Its used everywhere like in secure data storage, digital signatures and cryptocurrency amongst many others`
+- **Salting**
+	- `Salting is where theres other data sprinkled into the hash that adds other characters into the string to change the hash making it very very hard to break`
+- **Digital Signatures**
+	- `Hashes that ensure data has not been tampered with or to ensure something has not changed. For example, when you download software there is usually a hash given on the page to compare to hash of the downloaded data. These hashes are signatures of authenticity`
+- **Key Stretching**
+	- `Makes a weak password hash into a massivly difficult one to break by repeatly hashing it possible hundreds to hundreds of thousands of times.`
+- **Blockchain**
+	- `A decentralized, distributed and publig digital ledger that records transactions across a peer-to-peer network. Mainly used for crypto but has other use cases such as supply chain management and verifying digital assets`
+- **Open public ledger**
+	- `The public ledger associated witha blockchain`
+- **Certificates**
+	- Certificate Authorities (CA)
+		- `CA's verify the identity of entitiies like websites people and organizations and bind their PK's to them. CA's are trusted by people and organizations do perform these actions`
+	- Certification revocation lists (CRLs)
+		- `A list of digital certs that have been revoked by the issuing CA before their experation`
+	- Online Certificate Status Protocol (OCSP)
+		- `A protocol that allows clients to directly query a CA for the status of a certificate.`
+	- Self-signed
+		- `A certificate signed by the developer or company responsible for the site or software instead of a trusted CA. Should only be used for testing and private networks`
+	- Third-party
+		- `Its justa a CA. Most are thrid party
+	- Root of trust
+		- `A root of trust is a trusted source within a cryptographic system that is implimented as a secure hardware module that ensures integrity and security of crypto operation, keys and digital certificates. They are initially issued and signed by a CA representing the top most level of trust`
+	- Certificate signing request (CSR)
+		- `A specific file with website and organization info sent to a CA to request a digital signature for their public key.`
+	- Wildcard
+		- `A certificate that secures multiple sub-domians under a single primary domain`

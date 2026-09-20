@@ -1,0 +1,241 @@
+## 3.0 Security Architecture
+
+### 3.1 Compare and contrast security implications of different architecture models.
+- **Architecture and infrastructure concepts**
+	- Cloud
+		- Responsibility Matrix
+			- `This is a document that outlines the operational and security responsibilites of both the cloud provider and the customer.`
+		- Hybrid Considerations
+			- `This is when your company uses or considers using both cloud and in house servers and services. In many situations it can be cost effective to mix it up depending.`
+		- Third-Party Vendors
+			- `This is in referance to the security risks that may come with using cloud services as they are always hosted by a third party wether it be Amazon or a less known provider`
+	- Infrastructure as code
+		- `This is where the infrastricture of a system is controlled by code, an example could be an AWS instance that is controlled by code. As in code is what runs the vm. It wierd`
+	- Serverless
+		- `This is an archetecural aproach where all of your companies applications are hosted on a cloud service. There are no in houser servers hosting anything.`
+	- Microservices
+		- `This is where each proccess is small and independent of the complete process. All of the microservices are then all communicate to eachother through API's.`
+	- Network Infrastructure
+		- Physical isolation
+			- `This is where a network is completely isolated from the internet. There is no gateway to the internet, OR it means that all of the network devices are not accessable to anyone accept those who need to manage it`
+			- Air-gapped
+				- `This is where a system is completely disconnected from any other systems or networks`
+	- Logical Segmentation
+		- `This is where a network is divided up into segments logically. There are no physical changes that need to be done. Think of VLANs and SDN`
+	- Software-Defined networking (SDN)
+		- `This is where all of the logical segmentation is controlled by a central program. It makes configuring and making changes alot easier`
+	- On-premises
+		- `This is just refering to an organizations IT infrastructure being either in house or cloud based`
+	- Centralized vs decentralized
+		- `Centralized is where all of the network traffic must go through a central node in order to communicate. Imagine every switch or end device connects to a main node`
+		- `Decentralized is where all of the traffic can route or go to wherever it needs to be without having to go through a main node`
+	- Containerization
+		- `This is where an application is package with all of its dependancies into a portable container that can be used on any infrastructure. Docker`
+	- Virtualization
+		- `Creating another system or machine logically. Think VMs`
+	- IoT
+		- `Internet of things. Internet connected devices that arent computers and server a specific purpose. Like internet controlled ACs and lights`
+	- Industry Control Systems(ICS)/SCADA
+		- `These are computer systems that control industrial proccesses.`
+	- Real-time Operating Systems
+		- `RTOS are operating systems that make decisions based on time and proccess criticality where as normal OSs focus on user interactions. RTOS are proccess oriented`
+	- Embedded Systems
+		- `Systems used for one specific function in a proccess. Think of computers that serve one specific reason. ABS in cars, pacemakers, etc`
+	- High Availability
+		- `This is where a system is always available to use and sits at a high level of performance
+- **Considerations**
+	- Availability
+		- `This could be the availabilty of hardware or it could be the availability of cloud services.`
+	- Resilience
+		- `How fast can a system recover from an error or faulure as well as how healthy a system may be. You want systems that dont stay down`
+	- Cost
+		- `Everything costs something. Money being the main cost. Network equipment isnt cheap`
+	- Responsiveness
+		- `This is how fast a service can respond to the user with the requested data. No one likes waiting for something to load`
+	- Scalability
+		- `How difficult it is to add or remove apects of a network. Lets say your site is getting alot of traffic and your current cloud plan cant keep up, so you upgrade; and it was easy. All the cloud services had to do was allocate more recources to your system.`
+	- Ease of deployment
+		- `How easy is it to setup and begin running said service.`
+	- Risk Transference
+		- `When using cloud applications alot of the risk is shifted over to the cloud provider as your essentially relying on them to secure the application or services.`
+	- Ease of Recovery
+		- `How difficult it is to perform a system recovery.`
+	- Patch Availability
+		- `You want your system to be available to as many security patches as possible and as soon as they are released. Pretty straight forward`
+	- Inability to Patch
+		- `If you cannot patch a service or system. that is bad. you need patches for vulnerabilities or else youll just get hacked over and over again`
+	- Power
+		- `How much electricity the system is actually using. It can get costly`
+	- Compute
+		- `How fast the systems can perform their designated functions.`
+
+### 3.2 Given a scenario, apply security principles to secure enterprise
+- **Infrastructure Considerations**
+	- Device Placement
+		- `You generally want to keep importiant devices hidden and inaccessable by anyone but the admins`
+	- Security Zones
+		- `You want to designate specific areas within the building and or network as areas where specific protocol are in place. This would be like an area with sensiive systems or information`
+	- Attack Surface
+		- `You want to minimize your enterpirses attack surfrace as much as possible. Limit all possiblilities and spots for attackers to even try to conduct malicious activity`
+	- Connectivity
+		- `Minimize connection losses.`
+	- Failure Modes
+		- Fail-Open
+			- `This is when an error is encountered and the machine or service defaults back to a base operational state.`
+		- Fail-Close
+			- `This is when an error is encountered and the machine or service shuts down or prevents further user operation.`
+	- Device Attribute
+		- Active vs Passive
+			- `Active devices are devices that perfrom some sort of logical proccess like a router or switch.`
+			- `Passive devices are those that have a function but are not performing a logical proccess. Think of ethernet cabling`
+		- Inline vs tap/monitor
+			- `Inline is refering to a devices spot in a network. Traffic has to go through an inline device`
+			- `tap/monitor is refering to a device that receives copies of the traffic. Taps and monitors do not have to forward their traffic`
+	- Network Appliances
+		- Jump Server
+			- `A jump server is a single access point for a private network that only allows authorized users to enter. This is different from a firewall as a firewall protects traffic and filters whereas a jump server is just a wall that doesnt let anything in or out unless allowed otherwise`
+		- Proxy Server
+			- `A server that acts as an intermidiery to the internet. You send your requests to the proxy server, and the proxy makes the requests on your behalf and returns the result as expected`
+		- IPS/IDS
+			- `Intrusion Prevention Systems are as the name implies, they prevent intrusions of the network. Itrusion Detection Systems, well, they can detect if there has been an intrusion. They are alot more complex that i make them out to be here.`
+		- Load Balancer
+			- `This is a server technology that redirects traffic evenly amongst different instances of the application which is receiving all the traffic`
+		- Sensors
+			- `I belive this is referance to physical sensors like moisture, movement etc`
+	- Port Security
+		- 802.1X
+			- `This is a port based authentication network access control standard that ensures only authorized devices may access the selected port`
+		- EAP(Extensible Authentication Protocol)
+			- `This is a part of 802.1X standards that is used to authenticate usernames, passwords, certs and tokens`
+	- Firewall Types
+		- Web Application Firewall
+			- `These are firewalls that are designed to block web application attacks such as SQL injections and XSS.`
+		- Unified Threat Management
+			- `This is an all-in-one type of firewall. It does it all. More cost effective as it is only one appliance`
+		- Next-Generation Firewall
+			- `These are firwall powerhouses. These things hare extremely capable, powerfull and fast. They can do alot more than any basic UTM could ever`
+		- Layer4/Layer7
+			- `This is in referance to where in the data tranfer proccess that a firewall is used. At layer 3 it would be using metrics from straight data anomolies. Layer 7 firewalls are actually able to inspect packets allowing for much greater security`
+	- **Secure Communication/access**
+		- Virtual Private Network
+			- `As the name suggests, a vpn is a virtual network as in a network hosted elsewhere. These are well known asf`
+		- Remote Access
+			- `Remote access is where a user accesses a system from a different system located elsewhere geographically. Most of the popular protocols for this are very secure such as SSH`
+		- Tunneling
+			- `This is where your traffic packets are encapsulated with another encrypted protocol. This is generally from one place to another.`
+			- Transport Layer Security(TLS)
+				- `This is tunneling for HTTPS. Its what make HTTPS secure from http. Its also used in other protocols but its most popular in http`
+			- Internet protocol security(IPSec)
+				- `Another type of transportation encryption protocol. Used commonly in vpns`
+		- Software defined wide area network (SD-WAN)
+			- `This is where WAN's are connected and controlled by software. Simple concept but it is a massive undertaking`
+		- Secure Access Service Edge (SASE)
+			- `Its essentially security features hosted in the edge of the network / the internet gateway`
+
+### 3.3 Compare and contrast concepts and strategies to protect data
+- **Data Types**
+	- Regulated
+		- `This is any data that has restrictions as to who can access or use it`
+	- Trade Secret
+		- `These are like secrets of the company, usually a proccess. Think of coca cola and their secret recipie`
+	- Intellectual Property
+		- `IPs are ideas that are legally yours. Think of IPs in entertainment such as mickey mouse or star wars`
+	- Legal Information
+		- `Pretty straight forward, data in regards to legal proccess`
+	- Financial Information
+		- `Again, stright forward. Things like receipts or ledgers or anything that has to do with money. These are of utmost urgency to protect`
+	- Human and non human readable
+		- `Non human readable would just be like binaries or things that we can read. Machine code, obuscated code etc`
+- **Data Classifications**
+	- Sensitive
+		- `This is information such as personal information that you wouldnt want to be out there`
+	- Confidential
+		- `This is information that is not meant to be seen, used or even known about by individuals except for those with explicit permissions`
+	- Public
+		- `Available to anyone`
+	- Restricted
+		- `Information that is not as serious as confidential but is also not meant to be easily accessible. Available to people with correct permissions`
+	- Private
+		- `This is information that is supposed to belong to one user`
+	- Critical
+		- `Critical data is data that is rwquired for importiant proccesses. Should critical data be lost... rip. Make many secure backups`
+- **General Data Considerations**
+	- Data States
+		- Data at Rest
+			- `This is data that is sitting on a drive yet to be loaded into memory`
+		- Data in Transit
+			- `Data that is being moved over a network transfer.`
+		- Data in use
+			- `Data that is actually loaded into memory and being used for some sort of proccess`
+	- Data sovereignty
+	- Geolocation
+		- `Geolocation is your exact position on the Earth. Attackers are able to find geolocations through many different means`
+- **Methods to Secure data**
+	- Geographic restrictions
+		- `Many countries have restrictions as to what the people can connect to so people often use VPNs to avoid these restrictions. This can be used to protect your companies data only allowing people from specific locations to access recources
+	- Encryption
+		- `This is standard. ALWAYS ENCRYPT STUFF`
+	- Hashing
+		- `Always use hashes/certificates to validate and authenticate when needed`
+	- Masking
+		- `Masking data as other insignificant data is very effective for detering attackers as they wont target useless info`
+	- Tokenization
+		- `Whenever using sensitive information in data transfers, alwasy use some form of tokenization. Even if it is encrypted STILL tokenize it`
+	- Obfuscation
+		- `Adding alot of extra garbage to importiant info is great for hiding.`
+	- Segmentation
+		- `Should something actually go wrong, at least it cant escape its segment and spread out to other segments`
+	- Permissions Restrictions
+		- `Explicit permissions based on the user are pretty good. Do that for everyone, never has implicit permissions`
+
+### 3.4 Explain the importance of resilience and recovery in security architecture
+- **High Availability**
+	- Load balancing vs clustering
+		- `Load balancing is where traffic is distributed to several different instances. Clustering is where there are many servers acting as one whole. 2 very different concepts`
+- **Site Locations**
+	- Hot
+		- `If your servers are in an area where its super hot, your gonna need alot of cooling. If them thangs overheat they will slowdown and even shutoff to prevent data loss.`
+	- Cold
+		- `Well this is ideal, you dont have to do as much cooling for servers`
+	- Warm
+		- `I mean make sure ur stuff is cold`
+	- Geographic dispersion
+		- `Its not a bad idea to have different sites all over the place for reduncancy as well as improved connectivity for users`
+- **Platform Diversity**
+- **Multi cloud systems**
+- **Continuity of operations**
+- **Capacity Planning**
+	- People
+		- `Plan for having more people within the network`
+	- Technology
+		- `You gotta know what you may need in the future in regards to hardware.`
+	- Infrastructure
+- **Testing**
+	- Tabletop exercises
+		- `This is where the team sits down and simulates a security event and asses their response plan.`
+	- Fail over
+		- `A fail over test is where you test a servers response to being overloaded with traffic`
+	- Simulation
+		- `Simulating a security event can be a great way to analyze your security posture and make improvements or even just to plan for said events.`
+	- Parallel processing
+		- `Always test out parallel processing programs before putting them into production as this can easily introduce race conditions if not carefull`
+- **Backups**
+	- Onsite/Offsite
+		- `Having backups is essential but also keeping them in places apart from the main site. This allows for recovery in the case of a massive disaster wiping everything at the main site`
+	- Frequency
+		- `BACKUP ALL THE TIME. Atleast once a week to day depending on the data sensitivity`
+	- Encryption
+		- `Again, ALWAYS ENCRYPT. Do not allow an attacker to find an unencrypted backup. Your done if so`
+	- Snapshots
+		- `Keeping machine snapshots are good in case of quick recoveries. Especially for VMs being able to reset quickly is great`
+	- Recovery
+		- `Having a faster recovery time is incredibly importiant in case of emerfency`
+	- Replication
+		- ``
+	- Journaling
+		- `Knowing when backups were deployed as well as when they were made is very importiant for logging purposes. If attacked it can always be good to validate backups ensuring they havent been messed with`
+- **Power**
+	- Generators
+		- `Great idea. Relying on local power may be risky as it could go out and you loose all of your site's information. Generators are good`
+	- Uninterruptible Power Supply (UPS)
+		- `These are great. If your site loses power a UPS will keep select systems powered for a bit of time as to prevent sudden shutdowns and crashes. No data lost!`
